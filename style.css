@@ -353,6 +353,7 @@ div#sidebar > ul > li > a:hover {
 #projects h2 {
   font-size: 48px;
   color: #f7601b;
+  margin: 24px auto;
   font-weight: bolder;
   text-align: center;
   text-shadow: 0px 0px 5px black, 0px 0px 20px black, 0px 0px 40px white;
@@ -364,6 +365,7 @@ div#sidebar > ul > li > a:hover {
   box-shadow: #f9faf8 0 0 5px, #f9faf8 0 0 15px, #f9faf8 0 0 30px;
   max-width: 500px;
   margin: 32px auto;
+  padding: 32px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -472,7 +474,7 @@ div#sidebar > ul > li > a:hover {
 }
 
 .quote {
-  padding: 32px 30%;
+  padding: 80px 30%;
   background: url(images/pexels-aleksandar-pasaric-6560708.jpg) no-repeat center
     center fixed;
   background-size: cover;
@@ -586,7 +588,7 @@ footer {
   }
 } */
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 640px) {
   .right-nav,
   .mid-nav {
     display: none;
