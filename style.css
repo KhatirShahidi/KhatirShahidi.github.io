@@ -245,45 +245,50 @@ div#sidebar > ul > li > a:hover {
 }
 
 #about {
-  border: 2px solid #f9faf8;
-  border-radius: 5px;
-  box-shadow: #f9faf8 0 0 5px, #f9faf8 0 0 15px, #f9faf8 0 0 30px;
-  max-width: 500px;
-  height: 50vh;
-  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.about {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 16px;
-  margin: 50px auto;
+  gap: 32px;
+  margin: 32px auto;
+  padding: 32px;
+  border: 2px solid #f9faf8;
+  border-radius: 5px;
+  box-shadow: #f9faf8 0 0 5px, #f9faf8 0 0 15px, #f9faf8 0 0 30px;
+  max-width: 500px;
 }
-#about h2 {
+.about h2 {
   font-size: 48px;
   color: #f7601b;
   font-weight: bolder;
   text-align: center;
+
   text-shadow: 0px 0px 5px black, 0px 0px 20px black, 0px 0px 40px white;
 }
 
-#about p {
+.about p {
   text-align: center;
   font-size: 18px;
   color: white;
 }
 
 #skills {
-  height: 5%;
-  padding: 16px 32px;
+  min-height: 50vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 16px;
-  margin: 50px auto;
 }
-.content {
-  margin: 0 auto;
+.skills {
+  margin: 32px auto;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -292,7 +297,7 @@ div#sidebar > ul > li > a:hover {
   width: 100%;
   gap: 32px;
 }
-.content h2 {
+.skills h2 {
   font-size: 48px;
   color: #f7601b;
   font-weight: bolder;
@@ -317,7 +322,7 @@ div#sidebar > ul > li > a:hover {
 .card:hover {
   color: #f9faf8;
 }
-.content-img {
+.skills-img {
   width: 144px;
   height: 144px;
   color: #1f2937;
@@ -327,28 +332,22 @@ div#sidebar > ul > li > a:hover {
   transition: ease 0.1s;
 }
 
-.content-img > .bi {
+.skills-img > .bi {
   font-size: 120px;
 }
 
-.content-img:hover {
+.skills-img:hover {
   color: #ffffff;
   transition: ease 0.5s;
   transform: scale(1.05);
 }
 /* Projects */
 #projects {
-  margin: 50px auto;
-  border: 2px solid #f9faf8;
-  border-radius: 5px;
-  box-shadow: #f9faf8 0 0 5px, #f9faf8 0 0 15px, #f9faf8 0 0 30px;
-  max-width: 500px;
+  min-height: 50vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 16px;
-  padding: 16px 32px;
 }
 
 #projects h2 {
@@ -359,11 +358,23 @@ div#sidebar > ul > li > a:hover {
   text-shadow: 0px 0px 5px black, 0px 0px 20px black, 0px 0px 40px white;
 }
 
+.projects {
+  border: 2px solid #f9faf8;
+  border-radius: 5px;
+  box-shadow: #f9faf8 0 0 5px, #f9faf8 0 0 15px, #f9faf8 0 0 30px;
+  max-width: 500px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin: auto;
 }
 
 /* Hide the images by default */
@@ -454,13 +465,14 @@ div#sidebar > ul > li > a:hover {
 #quote {
   display: flex;
   width: 100%;
+  min-height: 50vh;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
 
 .quote {
-  padding: 80px 35%;
+  padding: 32px 30%;
   background: url(images/pexels-aleksandar-pasaric-6560708.jpg) no-repeat center
     center fixed;
   background-size: cover;
@@ -484,9 +496,10 @@ div#sidebar > ul > li > a:hover {
 
 #contact {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  min-height: 50vh;
 }
 
 .contact-section {
@@ -494,10 +507,10 @@ div#sidebar > ul > li > a:hover {
   justify-content: center;
   align-items: center;
   gap: 32px;
-  padding: 36px;
+  padding: 32px;
   background-color: #f7601b;
   border-radius: 5px;
-  margin: 100px auto;
+  margin: 32px auto;
   color: #f9faf8;
   flex-flow: column;
 }
@@ -548,7 +561,7 @@ footer {
   align-self: stretch;
 }
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .right-nav,
   .mid-nav {
     display: none;
@@ -571,7 +584,7 @@ footer {
   .author {
     font-size: 24px;
   }
-}
+} */
 
 @media (max-width: 640px) {
   .right-nav,
@@ -581,14 +594,20 @@ footer {
   i#menuIcon {
     display: block;
   }
+
   #about,
   #skills,
   #contact,
   #projects,
   #quote {
-    height: 75vh;
-    margin: 50px 5%;
+    min-height: 50vh;
+    margin: 24px 5%;
   }
+
+  .main {
+    flex-direction: column;
+  }
+
   .quote {
     font-size: 24px;
     padding: 80px 10%;
