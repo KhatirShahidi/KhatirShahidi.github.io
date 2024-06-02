@@ -134,11 +134,15 @@ header h1 {
   align-self: center;
   justify-content: center;
   align-items: center;
-  color: #1f2937;
-  max-height: 100%;
   overflow: hidden;
   box-shadow: 0 0 5px #f9faf8, 0 0 15px #f9faf8, 0 0 30px #f9faf8;
-  border-radius: 200px;
+  border-radius: 33vh;
+}
+
+.intro-image > img {
+  height: 33vh;
+  width: 33vh;
+  object-fit: cover;
 }
 
 .intro-links {
@@ -203,7 +207,7 @@ div#sidebar {
   position: fixed;
   top: 0;
   right: -200px;
-  width: 50vh;
+  width: 33vw;
   height: 100vh;
   padding: 16px;
   transition: all 0.2s;
@@ -250,7 +254,6 @@ div#sidebar > ul > li > a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
 }
 
 .about {
@@ -281,7 +284,6 @@ div#sidebar > ul > li > a:hover {
 }
 
 #skills {
-  min-height: 50vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
@@ -354,7 +356,6 @@ div#sidebar > ul > li > a:hover {
 }
 /* Projects */
 #projects {
-  min-height: 50vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
@@ -479,7 +480,6 @@ div#sidebar > ul > li > a:hover {
 #quote {
   display: flex;
   width: 100%;
-  min-height: 50vh;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
@@ -513,7 +513,6 @@ div#sidebar > ul > li > a:hover {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
 }
 
 .contact-section {
@@ -535,7 +534,7 @@ div#sidebar > ul > li > a:hover {
   align-items: center;
   gap: 8px;
   font-size: 24px;
-  width:100%;
+  width: 100%;
   min-width: 500px;
   font-weight: bold;
   text-align: center;
@@ -577,7 +576,7 @@ footer {
   align-self: stretch;
 }
 
-@media (max-width: 1280px) {
+@media screen and (max-width: 1280px) and (min-width: 720px) {
   .right-nav,
   .mid-nav {
     display: none;
@@ -587,7 +586,7 @@ footer {
     font-size: 48px;
   }
   header h1 {
-    font-size: 48px;
+    font-size: 64px;
   }
 
   div#sidebar > div > h1 {
@@ -609,20 +608,29 @@ footer {
   .intro-text h1,
   .about h2,
   .skills h2 {
-    font-size: 64px;
+    font-size: 80px;
   }
   #projects h2 {
-    font-size: 64px;
+    font-size: 80px;
   }
   .intro-text p,
   .intro-links i {
-    font-size: 32px;
+    font-size: 64px;
   }
   .about p,
-  .card p {
-    font-size: 24px;
+  .card p,
+  .quote p,
+  .text p {
+    font-size: 40px;
   }
   .contact-section {
     min-width: 90vw;
+  }
+  .contact-section > .text > input,
+  textarea {
+    font-size: 40px;
+  }
+  footer p {
+    font-size: 40px;
   }
 }
