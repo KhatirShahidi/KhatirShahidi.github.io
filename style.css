@@ -22,6 +22,7 @@ body {
 header {
   display: flex;
   width: 100%;
+  max-height: 50vh;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
@@ -61,7 +62,7 @@ header h1 {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 16px;
+  gap: 64px;
   list-style: none;
 }
 
@@ -202,7 +203,7 @@ div#sidebar {
   position: fixed;
   top: 0;
   right: -200px;
-  width: 200px;
+  width: 50vh;
   height: 100vh;
   padding: 16px;
   transition: all 0.2s;
@@ -270,7 +271,6 @@ div#sidebar > ul > li > a:hover {
   color: #f7601b;
   font-weight: bolder;
   text-align: center;
-
   text-shadow: 0px 0px 5px black, 0px 0px 20px black, 0px 0px 40px white;
 }
 
@@ -290,10 +290,9 @@ div#sidebar > ul > li > a:hover {
 .skills {
   margin: 32px auto;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: column wrap;
   width: 100%;
   gap: 32px;
 }
@@ -306,34 +305,46 @@ div#sidebar > ul > li > a:hover {
 }
 .cards {
   display: flex;
-  justify-content: space-around;
-  gap: 32px;
-  flex-flow: row wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+  flex-direction: row;
+  margin: 0 10%;
+}
+
+.cards p {
+  max-width: 200px;
 }
 
 .card {
-  max-width: 150px;
+  min-width: 25%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   color: #1f293700;
   transition: ease-in 0.7s;
   text-align: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .card:hover {
   color: #f9faf8;
 }
 .skills-img {
-  width: 144px;
-  height: 144px;
   color: #1f2937;
   /* border: 3px solid #f7601b; */
   background-image: linear-gradient(180deg, #f7691b, rgba(0, 0, 0, 0));
   border-radius: 20px;
   transition: ease 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
 }
 
 .skills-img > .bi {
-  font-size: 120px;
+  font-size: 150px;
 }
 
 .skills-img:hover {
@@ -377,6 +388,7 @@ div#sidebar > ul > li > a:hover {
 .slideshow-container {
   max-width: 1000px;
   position: relative;
+  display: flex;
 }
 
 /* Hide the images by default */
@@ -523,6 +535,8 @@ div#sidebar > ul > li > a:hover {
   align-items: center;
   gap: 8px;
   font-size: 24px;
+  width:100%;
+  min-width: 500px;
   font-weight: bold;
   text-align: center;
 }
@@ -563,31 +577,6 @@ footer {
   align-self: stretch;
 }
 
-/* @media (max-width: 1280px) {
-  .right-nav,
-  .mid-nav {
-    display: none;
-  }
-  i#menuIcon {
-    display: block;
-  }
-  #about,
-  #skills,
-  #contact,
-  #projects,
-  #quote {
-    height: 75vh;
-    margin: 50px 5%;
-  }
-  .quote {
-    font-size: 32px;
-    padding: 160px 10%;
-  }
-  .author {
-    font-size: 24px;
-  }
-} */
-
 @media (max-width: 1280px) {
   .right-nav,
   .mid-nav {
@@ -595,26 +584,45 @@ footer {
   }
   i#menuIcon {
     display: block;
+    font-size: 48px;
+  }
+  header h1 {
+    font-size: 48px;
   }
 
-  #about,
-  #skills,
-  #contact,
-  #projects,
-  #quote {
-    min-height: 50vh;
-    margin: 24px 5%;
+  div#sidebar > div > h1 {
+    font-size: 2.5em;
+  }
+  div#sidebar > ul {
+    gap: 32px;
+    margin-top: 32px;
   }
 
-  .main {
-    flex-direction: column;
+  div#sidebar > ul > li > a {
+    font-size: 1.5em;
   }
-
-  .quote {
+  .intro-text,
+  .about,
+  .skills {
+    max-width: 90%;
+  }
+  .intro-text h1,
+  .about h2,
+  .skills h2 {
+    font-size: 64px;
+  }
+  #projects h2 {
+    font-size: 64px;
+  }
+  .intro-text p,
+  .intro-links i {
+    font-size: 32px;
+  }
+  .about p,
+  .card p {
     font-size: 24px;
-    padding: 80px 10%;
   }
-  .author {
-    font-size: 16px;
+  .contact-section {
+    min-width: 90vw;
   }
 }
