@@ -641,7 +641,7 @@ footer {
 
   .caption-text {
     font-size: 2em;
-
+  }
   .quote p {
     font-size: 1em;
     background-color: #ffffff80;
@@ -651,7 +651,8 @@ footer {
     min-width: 90vw;
   }
   .contact-section > .text > input,
-  textarea, p {
+  textarea,
+  p {
     font-size: 2em;
   }
   button.contact {
