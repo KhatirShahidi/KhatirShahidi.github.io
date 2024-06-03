@@ -80,13 +80,14 @@ header h1 {
 
 .contact {
   background-color: #f7601b;
-  flex: 0 1 auto;
   width: 100px;
   height: 30px;
   border-radius: 5px;
-  border: none;
+  border: white solid 2px;
   color: #f9faf8;
   font-weight: bold;
+  text-align: center;
+  justify-content: center;
   padding-bottom: 2px;
 }
 
@@ -140,8 +141,8 @@ header h1 {
 }
 
 .intro-image > img {
-  height: 33vh;
-  width: 33vh;
+  min-height: 33vh;
+  min-width: 33vh;
   object-fit: cover;
 }
 
@@ -172,7 +173,7 @@ header h1 {
 }
 
 .intro h1 {
-  font-size: 48px;
+  font-size: 3em;
   font-weight: bolder;
   align-self: center;
   margin-bottom: -16px;
@@ -180,11 +181,11 @@ header h1 {
 
 .sidekick-text {
   color: #e5e7eb;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 i.bi {
-  font-size: 24px;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -270,7 +271,7 @@ div#sidebar > ul > li > a:hover {
   max-width: 500px;
 }
 .about h2 {
-  font-size: 48px;
+  font-size: 3em;
   color: #f7601b;
   font-weight: bolder;
   text-align: center;
@@ -279,7 +280,7 @@ div#sidebar > ul > li > a:hover {
 
 .about p {
   text-align: center;
-  font-size: 18px;
+  font-size: 1em;
   color: white;
 }
 
@@ -299,7 +300,7 @@ div#sidebar > ul > li > a:hover {
   gap: 32px;
 }
 .skills h2 {
-  font-size: 48px;
+  font-size: 3em;
   color: #f7601b;
   font-weight: bolder;
   text-align: center;
@@ -310,34 +311,31 @@ div#sidebar > ul > li > a:hover {
   justify-content: center;
   align-items: start;
   gap: 16px;
-  flex-direction: row;
-  margin: 0 10%;
-}
-
-.cards p {
-  max-width: 200px;
+  flex-flow: row wrap;
+  margin: 0 auto;
 }
 
 .card {
-  min-width: 25%;
+  max-width: 35%;
   display: flex;
   justify-content: start;
   align-items: center;
-  color: #1f293700;
-  transition: ease-in 0.7s;
+  transition: ease-in 1s;
   text-align: center;
   flex-direction: column;
+  color: #1f2937;
 }
-
 .card:hover {
   color: #f9faf8;
+  transition: ease-in 1s;
 }
+
 .skills-img {
   color: #1f2937;
   /* border: 3px solid #f7601b; */
   background-image: linear-gradient(180deg, #f7691b, rgba(0, 0, 0, 0));
   border-radius: 20px;
-  transition: ease 0.1s;
+  transition: ease 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -346,7 +344,7 @@ div#sidebar > ul > li > a:hover {
 }
 
 .skills-img > .bi {
-  font-size: 150px;
+  font-size: 10em;
 }
 
 .skills-img:hover {
@@ -363,9 +361,9 @@ div#sidebar > ul > li > a:hover {
 }
 
 #projects h2 {
-  font-size: 48px;
+  font-size: 3em;
   color: #f7601b;
-  margin: 24px auto;
+  margin: 0 auto;
   font-weight: bolder;
   text-align: center;
   text-shadow: 0px 0px 5px black, 0px 0px 20px black, 0px 0px 40px white;
@@ -408,7 +406,7 @@ div#sidebar > ul > li > a:hover {
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1em;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -429,7 +427,7 @@ div#sidebar > ul > li > a:hover {
 /* Caption text */
 .caption-text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 1em;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -440,7 +438,7 @@ div#sidebar > ul > li > a:hover {
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 1em;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -490,7 +488,7 @@ div#sidebar > ul > li > a:hover {
   background: url(images/pexels-aleksandar-pasaric-6560708.jpg) no-repeat center
     center fixed;
   background-size: cover;
-  font-size: 36px;
+  font-size: 2em;
   font-weight: lighter;
   font-style: italic;
   color: #1f2937;
@@ -498,13 +496,13 @@ div#sidebar > ul > li > a:hover {
 }
 
 .quote p {
+  font-size: 1em;
   mix-blend-mode: luminosity;
 }
 
 .author {
   display: flex;
   flex-direction: row-reverse;
-  font-size: 24px;
   font-weight: bold;
 }
 
@@ -533,7 +531,7 @@ div#sidebar > ul > li > a:hover {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  font-size: 24px;
+  font-size: 1.5em;
   width: 100%;
   min-width: 500px;
   font-weight: bold;
@@ -546,13 +544,13 @@ textarea {
   width: 100%;
   border-radius: 5px;
   padding: 8px;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 .contact-section > button {
   border: 2px solid #f9faf8;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 1em;
   background-color: #f7601b;
   color: #f9faf8;
   transition: ease-in 0.7s;
@@ -572,7 +570,7 @@ footer {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 24px 0px;
+  padding: 1.5em 0px;
   align-self: stretch;
 }
 
@@ -583,10 +581,14 @@ footer {
   }
   i#menuIcon {
     display: block;
-    font-size: 48px;
+    font-size: 4em;
+  }
+
+  #closeIcon {
+    display: none;
   }
   header h1 {
-    font-size: 64px;
+    font-size: 5em;
   }
 
   div#sidebar {
@@ -603,6 +605,7 @@ footer {
   div#sidebar > ul > li > a {
     font-size: 2.5em;
   }
+
   .intro-text,
   .about,
   .skills {
@@ -610,30 +613,59 @@ footer {
   }
   .intro-text h1,
   .about h2,
-  .skills h2 {
-    font-size: 80px;
-  }
+  .skills h2,
   #projects h2 {
-    font-size: 80px;
+    font-size: 5em;
   }
   .intro-text p,
   .intro-links i {
-    font-size: 64px;
+    font-size: 3.5em;
   }
   .about p,
-  .card p,
-  .quote p,
-  .text p {
-    font-size: 40px;
+  .text p,
+  .sidekick-text p {
+    font-size: 2.5em;
   }
+
+  .cards {
+    gap: 32px;
+  }
+
+  .card {
+    min-width: 45%;
+  }
+
+  .card p {
+    display: none;
+  }
+
+  .caption-text {
+    font-size: 2em;
+
+  .quote p {
+    font-size: 1em;
+    background-color: #ffffff80;
+  }
+
   .contact-section {
     min-width: 90vw;
   }
   .contact-section > .text > input,
-  textarea {
-    font-size: 40px;
+  textarea, p {
+    font-size: 2em;
+  }
+  button.contact {
+    font-size: 3em;
+    flex: 0 1 auto;
+    width: 25%;
+    height: 12.5%;
+    border-radius: 20px;
+    border: white solid 5px;
+    color: #f9faf8;
+    font-weight: bold;
+    padding-bottom: 2px;
   }
   footer p {
-    font-size: 40px;
+    font-size: 2em;
   }
 }
