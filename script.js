@@ -59,3 +59,49 @@ sidebarBackground.addEventListener("click", function () {
   sidebarBackground.style.visibility = "hidden";
   sidebar.style.right = "-200px";
 });
+
+// Form Area
+
+const contactForm = document.querySelector(".text");
+const contactBtn = document.querySelector(".contact");
+
+contactBtn.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  const nameInput = document.querySelector('input[name="Name"]');
+  const emailInput = document.querySelector('input[name="Email"]');
+  const messageInput = document.querySelector('textarea[name="Message"]');
+
+  // Basic Validation
+  let isValid = true;
+
+  if (nameInput.value.trim() === "") {
+    isValid = false;
+    nameInput.classList.add("error"); // Add error class for styling
+  } else {
+    nameInput.classList.remove("error"); // Remove error class if fixed
+  }
+
+  if (emailInput.value.trim() === "" || !validateEmail(emailInput.value)) {
+    isValid = false;
+    emailInput.classList.add("error");
+  } else {
+    emailInput.classList.remove("error");
+  }
+
+  if (messageInput.value.trim() === "") {
+    isValid = false;
+    messageInput.classList.add("error");
+  } else {
+    messageInput.classList.remove("error");
+  }
+
+  // If valid, can send the form data
+  if (isValid) {
+    console.log("Form is valid! Sending data...");
+    // API here
+
+    // Clear form after successful submission (optional)
+    contactForm.reset();
+  }
+});
